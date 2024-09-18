@@ -15,12 +15,8 @@ class TreeNode: Equatable {
 
 class BinaryTree {
     
-    var root: TreeNode?
-    
-    init() {
-        self.root = nil
-    }
-    
+    var root: TreeNode? = nil
+        
     func insert(key: Int, current: TreeNode? = nil) {
         let treeNode = TreeNode(key: key)
         var currentNode = current
