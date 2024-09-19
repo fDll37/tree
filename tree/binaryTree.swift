@@ -1,4 +1,4 @@
-class TreeNode: Equatable {
+final class TreeNode: Equatable {
     static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
         lhs.key == rhs.key
     }
@@ -13,7 +13,7 @@ class TreeNode: Equatable {
 }
 
 
-class BinaryTree {
+final class BinaryTree {
     
     var root: TreeNode? = nil
         
@@ -140,8 +140,8 @@ class BinaryTree {
     }
     
     func printFrom(node: TreeNode?) {
-        guard let node = node else { return }
         
+        guard let node = node else { return }
         printFrom(node: node.left)
         print("\(node.key)")
         printFrom(node: node.right)
